@@ -32,6 +32,9 @@ body {
   background-color: #fff;
 }
 
+@layer base {
+}
+
 @layer components {
   .center {
     display: flex;
@@ -51,5 +54,11 @@ body {
     -webkit-line-clamp: 3;
     line-clamp: 3;
     -webkit-box-orient: vertical;
+  }
+}
+
+@layer utilities {
+  .text-hero-gradient {
+    @apply bg-gradient-to-tr from-heroGradient-100 via-heroGradient-300 to-heroGradient-400 bg-clip-text text-transparent;
   }
 }
