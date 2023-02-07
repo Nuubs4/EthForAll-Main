@@ -1,7 +1,15 @@
 import type { AppProps } from "next/app"
 
+import ArcanaProvider from "../provider/Arcana/ArcanaAuth"
+
 import "../styles/globals.css"
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <ArcanaProvider>
+      <Component {...pageProps} />
+    </ArcanaProvider>
+  )
 }
+
+export default App

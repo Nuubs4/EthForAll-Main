@@ -14,11 +14,14 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@arcana/auth": "^1.0.0",
+    "@arcana/auth-react": "^0.0.2",
     "@fontsource/poppins": "^4.5.10",
     "@fontsource/space-grotesk": "^4.5.13",
     "@next/font": "13.1.6",
     "@portabletext/react": "^2.0.1",
     "autoprefixer": "^10.4.13",
+    "ethers": "^6.0.2",
     "next": "13.1.6",
     "postcss": "^8.4.21",
     "react": "18.2.0",
