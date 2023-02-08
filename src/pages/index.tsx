@@ -1,12 +1,16 @@
 import React from "react"
 
 import HomeHero from "../components/home/hero"
+import Navbar from "../components/layout/navbar/Navbar"
 
 const HomePage = () => {
   return (
-    <div className="center h-screen w-screen bg-background text-typo">
-      <HomeHero />
-    </div>
+    <>
+      <Navbar />
+      <div className="center h-screen w-screen">
+        <HomeHero />
+      </div>
+    </>
   )
 }
 

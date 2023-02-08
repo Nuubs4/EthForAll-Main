@@ -1,11 +1,13 @@
 import React from "react"
 import Image from "next/image"
 
+import BlobDesign from "../../../assets/design/blob-1.png"
 import HeroImage from "../../../assets/image/HomeHero.png"
 
 const HomeHero = () => {
   return (
-    <div className="grid grid-cols-1 items-center gap-6 px-4 md:grid-cols-2">
+    <div className="relative grid grid-cols-1 items-center gap-6 px-4 md:grid-cols-2">
+      <Image src={BlobDesign} alt={"Blob"} className="absolute scale-50 opacity-25 md:ml-56" />
       <div className="m-auto w-full space-y-3 md:w-4/5">
         <h1 className="text-hero-gradient text-5xl font-extrabold">Hello, world!</h1>
         <h1 className="text-2xl">Heading here</h1>

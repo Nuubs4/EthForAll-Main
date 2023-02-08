@@ -33,6 +33,9 @@ body {
 }
 
 @layer base {
+  html {
+    @apply bg-background text-typo;
+  }
 }
 
 @layer components {
@@ -60,5 +63,9 @@ body {
 @layer utilities {
   .text-hero-gradient {
     @apply bg-gradient-to-tr from-heroGradient-100 via-heroGradient-300 to-heroGradient-400 bg-clip-text text-transparent;
+  }
+
+  .menu-link {
+    @apply relative cursor-pointer opacity-50 transition-all after:absolute after:bottom-0 after:left-0 after:h-[1.25px] after:w-0 after:bg-typo after:transition-all hover:opacity-100 hover:after:w-full;
   }
 }
