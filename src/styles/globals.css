@@ -68,4 +68,12 @@ body {
   .menu-link {
     @apply relative cursor-pointer opacity-50 transition-all after:absolute after:bottom-0 after:left-0 after:h-[1.25px] after:w-0 after:bg-typo after:transition-all hover:opacity-100 hover:after:w-full;
   }
+
+  .overlay {
+    @apply fixed z-10 h-screen w-screen bg-black/50;
+  }
+
+  .modal {
+    @apply center fixed z-20 h-screen w-screen;
+  }
 }
