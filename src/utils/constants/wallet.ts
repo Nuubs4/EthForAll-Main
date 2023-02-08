@@ -1,4 +1,4 @@
-import WalletLogo from "../../assets/wallet"
+import WalletLogo from "../../assets/auth/wallet"
 
 const Wallets = [
   {

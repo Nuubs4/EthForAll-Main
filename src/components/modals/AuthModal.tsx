@@ -12,7 +12,7 @@ import ModalProps from "./Modal.types"
 const ModalContent = ({ className, ...props }: ModalProps) => {
   return (
     <div
-      className={"h-4/5 w-11/12 rounded-3xl bg-black ring-1 ring-white/70 md:w-1/3 " + className}
+      className={"w-11/12 rounded-3xl bg-black ring-1 ring-white/70 md:w-1/3 " + className}
       {...props}
     >
       <Wallet />
