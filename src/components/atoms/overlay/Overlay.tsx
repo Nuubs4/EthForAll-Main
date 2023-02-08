@@ -1,7 +1,9 @@
 import React from "react"
 
-const Overlay = () => {
-  return <div className="overlay" />
+import OverlayProps from "./Overlay.types"
+
+const Overlay = ({ color, isOpen, ...props }: OverlayProps) => {
+  return <div className={"overlay " + color + " " + (isOpen === true ? "" : "hidden")} {...props} />
 }
 
 export default Overlay

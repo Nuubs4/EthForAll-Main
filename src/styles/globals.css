@@ -74,6 +74,6 @@ body {
   }
 
   .modal {
-    @apply center fixed z-20 h-screen w-screen;
+    @apply fixed z-20 h-screen w-screen;
   }
 }

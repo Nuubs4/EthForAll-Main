@@ -3,7 +3,9 @@ import { BsFillPersonFill } from "react-icons/bs"
 
 import Button from "../../atoms/button/Button"
 
-const Navbar = () => {
+import NavbarProps from "./Navbar.types"
+
+const Navbar = ({ handleModal }: NavbarProps) => {
   return (
     <div className="flex w-full justify-between py-4 px-12">
       <div>Logo</div>
@@ -16,7 +18,11 @@ const Navbar = () => {
           <li className="menu-link">Menu 5</li>
         </ul>
       </div>
-      <Button className="" variant="secondary">
+      <Button
+        onClick={handleModal ? () => handleModal() : undefined}
+        className=""
+        variant="secondary"
+      >
         <span>Register</span>
         <BsFillPersonFill className="scale-110" />
       </Button>
