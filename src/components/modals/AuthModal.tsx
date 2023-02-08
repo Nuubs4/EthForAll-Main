@@ -4,6 +4,7 @@ import useModal from "../../hooks/useModal"
 import useReadyState from "../../hooks/useReadyState"
 import createPortal from "../../utils/hof/createPortal"
 import Overlay from "../atoms/overlay/Overlay"
+import Wallet from "../general/wallet/Wallet"
 
 import Modal from "./Modal"
 import ModalProps from "./Modal.types"
@@ -11,9 +12,11 @@ import ModalProps from "./Modal.types"
 const ModalContent = ({ className, ...props }: ModalProps) => {
   return (
     <div
-      className={"h-4/5 w-full rounded-3xl bg-black ring-1 ring-white/70 md:w-1/3 " + className}
+      className={"h-4/5 w-11/12 rounded-3xl bg-black ring-1 ring-white/70 md:w-1/3 " + className}
       {...props}
-    ></div>
+    >
+      <Wallet />
+    </div>
   )
 }
 
