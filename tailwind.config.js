@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         typo: "#fffeff",
         background: "#10061e",
+        gold: "#ffc979",
         heroGradient: {
           100: "#d641cd",
           200: "#f582a2",
