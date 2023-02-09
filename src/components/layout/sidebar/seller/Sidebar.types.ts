@@ -1,7 +1,8 @@
 import React from "react"
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
-  isOpen?: boolean
+  current: number
+  setCurrent: React.Dispatch<React.SetStateAction<any>>
 }
 
 export default SidebarProps

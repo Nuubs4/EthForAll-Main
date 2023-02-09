@@ -6,7 +6,7 @@ import Search from "../../../general/search/Search"
 
 import SidebarProps from "./Sidebar.types"
 
-const Sidebar = ({ children }: SidebarProps) => {
+const Sidebar = ({ children, current, setCurrent }: SidebarProps) => {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (
@@ -19,7 +19,13 @@ const Sidebar = ({ children }: SidebarProps) => {
               return (
                 <li
                   key={menu.id}
-                  className="mb-6 flex w-full cursor-pointer items-center justify-between text-gray-300 hover:text-gray-500"
+                  onClick={() => {
+                    setCurrent(index)
+                  }}
+                  className={
+                    "mb-6 flex w-full cursor-pointer items-center justify-between hover:text-typo/100 " +
+                    (current === index ? "text-typo/90" : "text-typo/40")
+                  }
                 >
                   <div className="flex items-center">
                     {menu.logo()}
@@ -74,11 +80,17 @@ const Sidebar = ({ children }: SidebarProps) => {
               return (
                 <li
                   key={menu.id}
-                  className="mb-6 flex w-full cursor-pointer items-center justify-between text-gray-300 hover:text-gray-500"
+                  onClick={() => {
+                    setCurrent(index)
+                    setIsOpen(false)
+                  }}
+                  className={
+                    "mb-6 flex w-full cursor-pointer items-center justify-between text-gray-300 hover:text-gray-500"
+                  }
                 >
                   <div className="flex items-center">
                     {menu.logo()}
-                    <span className="ml-2  text-sm">{menu.name}</span>
+                    <span className={"ml-2 text-sm "}>{menu.name}</span>
                   </div>
                   {menu.notification > 0 && (
                     <div className="flex items-center justify-center rounded bg-gray-700 py-1 px-3 text-xs text-gray-500">
