@@ -16,6 +16,7 @@
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
     "@fontsource/space-grotesk": "^4.5.13",
+    "@livepeer/react": "^2.1.5",
     "@next/font": "13.1.6",
     "@portabletext/react": "^2.0.1",
     "autoprefixer": "^10.4.13",
