@@ -12,7 +12,6 @@ const Navbar = ({ handleModal }: NavbarProps) => {
   const { connector, address: account, isConnected } = useAccount()
 
   React.useEffect(() => {
-    console.log(account)
     if (account) setAddress(account)
   }, [account])
 

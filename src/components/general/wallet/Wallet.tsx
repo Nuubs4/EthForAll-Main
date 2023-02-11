@@ -25,10 +25,6 @@ const ConnectWallet = () => {
   }, [])
 
   React.useEffect(() => {
-    console.log(address)
-  }, [address])
-
-  React.useEffect(() => {
     if (connectionError) {
       console.log(connectionError)
       setError({

@@ -19,6 +19,7 @@
     "@arcana/auth-wagmi": "^0.0.2",
     "@fontsource/poppins": "^4.5.10",
     "@fontsource/space-grotesk": "^4.5.13",
+    "@huddle01/huddle01-client": "^0.0.10",
     "@livepeer/react": "^2.1.5",
     "@next/font": "13.1.6",
     "@portabletext/react": "^2.0.1",
