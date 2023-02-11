@@ -1,11 +1,20 @@
 import React from "react"
 import { BsFillPersonFill } from "react-icons/bs"
+import { useAccount } from "wagmi"
 
 import Button from "../../atoms/button/Button"
 
 import NavbarProps from "./Navbar.types"
 
 const Navbar = ({ handleModal }: NavbarProps) => {
+  const [address, setAddress] = React.useState<`0x${string}` | null>(null)
+
+  const { connector, address: account, isConnected } = useAccount()
+
+  React.useEffect(() => {
+    if (account) setAddress(account)
+  }, [account])
+
   return (
     <div className="flex w-full justify-between py-4 px-12">
       <div>Logo</div>
@@ -19,11 +28,17 @@ const Navbar = ({ handleModal }: NavbarProps) => {
         </ul>
       </div>
       <Button
-        onClick={handleModal ? () => handleModal() : undefined}
+        onClick={address ? undefined : handleModal ? () => handleModal() : undefined}
         className=""
         variant="secondary"
       >
-        <span>Register</span>
+        {address ? (
+          <span>
+            {address.slice(0, 4)}...{address.slice(-3)}
+          </span>
+        ) : (
+          <span>Register</span>
+        )}
         <BsFillPersonFill className="scale-110" />
       </Button>
     </div>

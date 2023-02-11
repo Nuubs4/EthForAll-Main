@@ -9,7 +9,7 @@ const Alert = ({ icon, variant = "info", title, content, children, className }: 
   return (
     <>
       <div className={BASECLASS + " " + AlertVariants[variant] + "  " + className} role="alert">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-4">
           {icon}
           <div className="flex flex-col gap-0">
             <h3 className="text-lg font-medium">{title}</h3>
