@@ -1,6 +1,8 @@
 import React from "react"
 
-const ManageGigs = () => {
+import DashboardProps from "./Dashboard.types"
+
+const ManageGigs = ({ onClick }: DashboardProps) => {
   return <div>ManageGigs</div>
 }
 

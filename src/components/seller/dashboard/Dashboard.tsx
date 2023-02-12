@@ -1,5 +1,4 @@
 import React from "react"
-import { useState } from "react"
 
 import { Tab } from "@headlessui/react"
 import {
@@ -9,71 +8,18 @@ import {
   WalletIcon,
 } from "@heroicons/react/20/solid"
 
-import Navbar2 from "../../layout/navbar2/Navbar2"
+import SellerDashboardCategory from "../../../data/seller-dashboard-categories"
+import classNames from "../../../utils/functions/className"
+import SellerNavbar from "../../layout/seller-navbar/SellerNavbar"
 
 import DashboardProps from "./Dashboard.types"
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
-}
-const Dashboard = ({ onClick }: DashboardProps) => {
-  const [categories] = useState({
-    "Previous Gigs": [
-      {
-        id: 1,
-        title: "Portfolio Website Development",
-        date: "Dec 12",
-        status: "Completed",
-        price: 2,
-      },
-      {
-        id: 2,
-        title: "Blockchain Website Development",
-        date: "Dec 15",
-        status: "Completed",
-        price: 2,
-      },
-    ],
-    "Active Gigs": [
-      {
-        id: 1,
-        title: "Backend API Development",
-        date: "Jan 7",
-        status: "In Progress",
-        price: 16,
-      },
-      {
-        id: 2,
-        title: "UI/UX Design",
-        date: "Mar 19",
-        status: "In Progress",
-        price: 12,
-      },
-    ],
-    "Archieve Gigs": [
-      {
-        id: 1,
-        title: "Form Validation with React Hook Form",
-        date: "Jun 20",
-        status: "Archived",
-        price: 5,
-      },
-      {
-        id: 2,
-        title: "Next.js blog website",
-        date: "Feb 19",
-        status: "Archived",
-        price: 2,
-      },
-    ],
-  })
 
+const Dashboard = ({ onClick }: DashboardProps) => {
   return (
-    <div onClick={onClick}>
-      <Navbar2 />
+    <div>
+      <SellerNavbar />
       <div className="">
-        {/* <Navbar2 /> */}
         <main className="flex-1 pb-8">
-          {/* Page header */}
           <div className="bg-white shadow">
             <div className="px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-8">
               <div className="py-6 md:flex md:items-center md:justify-between lg:border-t lg:border-gray-200">
@@ -92,7 +38,7 @@ const Dashboard = ({ onClick }: DashboardProps) => {
                           alt=""
                         />
                         <h1 className="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9">
-                          Karthik S
+                          User name
                         </h1>
                       </div>
                       <dl className="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap">
@@ -150,7 +96,7 @@ const Dashboard = ({ onClick }: DashboardProps) => {
         <div className="w-full">
           <Tab.Group>
             <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-              {Object.keys(categories).map((category) => (
+              {Object.keys(SellerDashboardCategory).map((category) => (
                 <Tab
                   key={category}
                   className={({ selected }) =>
@@ -168,7 +114,7 @@ const Dashboard = ({ onClick }: DashboardProps) => {
               ))}
             </Tab.List>
             <Tab.Panels className="mt-2">
-              {Object.values(categories).map((posts, idx) => (
+              {Object.values(SellerDashboardCategory).map((posts, idx) => (
                 <Tab.Panel
                   key={idx}
                   className={classNames(

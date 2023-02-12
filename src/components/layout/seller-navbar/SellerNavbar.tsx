@@ -5,30 +5,16 @@ import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { PlusIcon } from "@heroicons/react/20/solid"
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
 
-import Navbar2Props from "./Navbar2.types"
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-}
-const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
-]
-const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
-]
+import {
+  sellerSupportNavbarNavigation,
+  sellerSupportNavbarPopup,
+  sellerUserDetails,
+} from "../../../data/seller-support-navbar"
+import classNames from "../../../utils/functions/className"
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ")
-}
+import SellerNavbarProps from "./SellerNavbar.types"
 
-const Navbar2 = ({ handleModal }: Navbar2Props) => {
+const SellerNavbar = ({ handleModal }: SellerNavbarProps) => {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -60,7 +46,7 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
                   />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                  {navigation.map((item) => (
+                  {sellerSupportNavbarNavigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -101,7 +87,11 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
                     <div>
                       <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
-                        <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                        <img
+                          className="h-8 w-8 rounded-full"
+                          src={sellerUserDetails.imageUrl}
+                          alt=""
+                        />
                       </Menu.Button>
                     </div>
                     <Transition
@@ -114,7 +104,7 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        {userNavigation.map((item) => (
+                        {sellerSupportNavbarPopup.map((item) => (
                           <Menu.Item key={item.name}>
                             {({ active }) => (
                               <a
@@ -139,7 +129,7 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
 
           <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              {navigation.map((item) => (
+              {sellerSupportNavbarNavigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
@@ -159,11 +149,11 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
             <div className="border-t border-gray-700 pt-4 pb-3">
               <div className="flex items-center px-5 sm:px-6">
                 <div className="flex-shrink-0">
-                  <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                  <img className="h-10 w-10 rounded-full" src={sellerUserDetails.imageUrl} alt="" />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-medium text-white">{user.name}</div>
-                  <div className="text-sm font-medium text-gray-400">{user.email}</div>
+                  <div className="text-base font-medium text-white">{sellerUserDetails.name}</div>
+                  <div className="text-sm font-medium text-gray-400">{sellerUserDetails.email}</div>
                 </div>
                 <button
                   type="button"
@@ -174,7 +164,7 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
                 </button>
               </div>
               <div className="mt-3 space-y-1 px-2 sm:px-3">
-                {userNavigation.map((item) => (
+                {sellerSupportNavbarPopup.map((item) => (
                   <Disclosure.Button
                     key={item.name}
                     as="a"
@@ -193,4 +183,4 @@ const Navbar2 = ({ handleModal }: Navbar2Props) => {
   )
 }
 
-export default Navbar2
+export default SellerNavbar
