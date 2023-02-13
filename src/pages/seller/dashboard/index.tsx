@@ -3,6 +3,7 @@ import React from "react"
 import Sidebar from "../../../components/layout/sidebar/seller/Sidebar"
 import Dashboard from "../../../components/seller/dashboard/Dashboard"
 import Deliverables from "../../../components/seller/dashboard/Deliverables"
+import Inbox from "../../../components/seller/dashboard/Inbox"
 import Inventory from "../../../components/seller/dashboard/Inventory"
 import Invoices from "../../../components/seller/dashboard/Invoices"
 import ManageGigs from "../../../components/seller/dashboard/ManageGigs"
@@ -11,6 +12,7 @@ import Settings from "../../../components/seller/dashboard/Settings"
 
 const Pages = [
   Dashboard,
+  Inbox,
   ManageGigs,
   PerformanceAnalytics,
   Deliverables,

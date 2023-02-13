@@ -1,6 +1,7 @@
 import Chat from "../../assets/svg/sidebar-icons/chat"
 import Dashboard from "../../assets/svg/sidebar-icons/dashboard"
 import Deliverables from "../../assets/svg/sidebar-icons/deliverables"
+import Inbox from "../../assets/svg/sidebar-icons/inbox"
 import Inventory from "../../assets/svg/sidebar-icons/inventory"
 import ManageGigs from "../../assets/svg/sidebar-icons/manage-gigs"
 import Market from "../../assets/svg/sidebar-icons/market"
@@ -17,36 +18,42 @@ const SellerDashboardMenu = [
   },
   {
     id: 1,
+    name: "Inbox",
+    logo: Inbox,
+    notification: 6,
+  },
+  {
+    id: 2,
     name: "Manage Gigs",
     logo: ManageGigs,
     notification: 0,
   },
   {
-    id: 2,
+    id: 3,
     name: "Performance & Analytics",
     logo: PerformanceAnalytics,
     notification: 0,
   },
   {
-    id: 3,
+    id: 4,
     name: "Deliverables",
     logo: Deliverables,
     notification: 0,
   },
   {
-    id: 4,
+    id: 5,
     name: "Invoices",
     logo: PerformanceAnalytics,
     notification: 0,
   },
   {
-    id: 5,
+    id: 6,
     name: "Inverntory",
     logo: Inventory,
     notification: 0,
   },
   {
-    id: 6,
+    id: 7,
     name: "Settings",
     logo: Settings,
     notification: 0,
