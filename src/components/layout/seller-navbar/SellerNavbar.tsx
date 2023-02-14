@@ -35,13 +35,13 @@ const SellerNavbar = ({ handleModal }: SellerNavbarProps) => {
                 </div>
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="block h-10 w-auto rounded-full lg:hidden"
+                    src="https://via.placeholder.com/50x50/ccc.png"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="hidden h-10 w-auto rounded-full lg:block"
+                    src="https://via.placeholder.com/50x50/ccc.png"
                     alt="Your Company"
                   />
                 </div>
