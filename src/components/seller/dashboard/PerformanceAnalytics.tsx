@@ -108,15 +108,15 @@ export const dataAreaG = {
 
 export default function PerformanceAnalytics() {
   return (
-    <div className="container max-h-screen divide-y-4 overflow-y-scroll bg-white">
+    <div className="container max-h-screen divide-y-4 overflow-y-scroll bg-white px-5 py-5 ">
       <div className="">
         <Bar options={optionsBarGraph} data={dataBarGraph} className="" />
       </div>
-      <div className="flex">
-        <div className="w-1/2">
+      <div className="flex flex-col ">
+        <div className="">
           <Line options={optionsBarGraph} data={dataBarGraph} />;
         </div>
-        <div className="w-1/2">
+        <div className="">
           <Line options={optionsAreaG} data={dataAreaG} />;
         </div>
       </div>
