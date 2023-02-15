@@ -9,6 +9,7 @@ import Invoices from "../../../components/seller/dashboard/Invoices"
 import ManageGigs from "../../../components/seller/dashboard/ManageGigs"
 import PerformanceAnalytics from "../../../components/seller/dashboard/PerformanceAnalytics"
 import Settings from "../../../components/seller/dashboard/Settings"
+import ChatMSG from "../../../components/general/chatComponents/chatMSG"
 
 const Pages = [
   Dashboard,
@@ -33,6 +34,7 @@ const DashboardPage = () => {
           },
         })}
       </Sidebar>
+      <ChatMSG />
     </>
   )
 }

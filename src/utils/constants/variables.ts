@@ -13,3 +13,7 @@ export const LIVEPEER_SIGN_PRIVATE_KEY = process.env.NEXT_PUBLIC_LIVEPEER_SIGN_P
 
 /* Huddle01 */
 export const HUDDLE01_API_KEY = process.env.NEXT_PUBLIC_HUDDLE01_API_KEY || ""
+
+/* PUSH PROTOCOL */
+export const PUSH_SUPPORT_ADDRESS=process.env.NEXT_SUPPORT_ADDRESS
+export const PUSH_API_KEY=process.env.NEXT_API_KEY
