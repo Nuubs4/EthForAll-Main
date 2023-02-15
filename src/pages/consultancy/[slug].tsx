@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import { ethers } from "ethers"
+import { BigNumber, ethers, utils } from "ethers"
 import { useRouter } from "next/router"
 import { toast } from "react-toastify"
 import { useAccount, useProvider, useSigner } from "wagmi"
@@ -10,6 +9,7 @@ import { Framework } from "@superfluid-finance/sdk-core"
 
 import HostVideo from "../../components/general/video-components/HostVideo"
 import PeerVideo from "../../components/general/video-components/PeerVideo"
+import { upgradeTokens } from "../../lib/superfluid/helprs"
 import { HUDDLE01_API_KEY } from "../../utils/constants/variables"
 
 const VideoCallPage = () => {
@@ -40,39 +40,57 @@ const VideoCallPage = () => {
 
   const handleJoin = async () => {
     try {
+      /* TODO: Create Stream */
+      const provider = new ethers.providers.Web3Provider(window.ethereum as any)
+      await provider.send("eth_requestAccounts", [])
+
+      const signer = provider.getSigner()
+
       const sf = await Framework.create({
         chainId: 80001,
         provider: provider,
       })
+      const superSigner = sf.createSigner({ signer: signer })
 
-      const fDaix = await sf.loadSuperToken("0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f")
+      console.log(signer)
+      console.log(await superSigner.getAddress())
 
-      // const approveOperation = fDaix.approve({
-      //   receiver: address as string,
-      //   amount: ethers.utils.parseUnits("100").toString(),
-      // })
+      const daix = await sf.loadSuperToken("fDAIx")
 
-      // const txn = await approveOperation.exec(signer)
-      // const receipt = await txn.wait()
-
-      const createFlowOperation = fDaix.createFlow({
-        sender: address,
-        receiver: joinID,
-        // flowRate: "1000000000000000",
-        flowRate: "10",
+      await upgradeTokens({
+        sfSigner: signer,
+        sfToken: daix,
+        upgrading: 10000000,
       })
 
-      console.log("Creating flow")
-      await createFlowOperation.exec(signer)
+      if (
+        (
+          await sf.cfaV1.getFlow({
+            sender: address as string,
+            receiver: joinID,
+            providerOrSigner: provider,
+            superToken: "0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f",
+          })
+        ).flowRate === "0"
+      ) {
+        console.log("Creating stream")
+        const newStreamOperation = sf.cfaV1.createFlow({
+          sender: address,
+          flowRate: BigNumber.from(1000).toString(),
+          receiver: joinID,
+          superToken: "0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f",
+          userData: utils.hexlify(utils.toUtf8Bytes(`${address} ${new Date()}`)),
+        })
 
-      const joinResponse = await huddleClient.join(joinID, {
-        address: address as string,
-        ens: address as string,
-        wallet: connector?.name,
-      })
+        const newStream = await newStreamOperation.exec(signer)
+
+        return newStream
+      } else {
+        console.log("Flow Already Exist")
+      }
 
       console.log("----- Joined Room -----")
-      console.log(joinResponse)
+      // console.log(joinResponse)
     } catch (error: any) {
       if (error.type === "NETWORK_MISMATCH") {
         toast.error("Please switch your network to Polygon Mumbai", {
