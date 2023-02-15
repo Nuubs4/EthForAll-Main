@@ -1,5 +1,6 @@
 import React from "react"
 
+import ChatMSG from "../../../components/general/chatComponents/chatMSG"
 import Sidebar from "../../../components/layout/sidebar/seller/Sidebar"
 import Dashboard from "../../../components/seller/dashboard/Dashboard"
 import Deliverables from "../../../components/seller/dashboard/Deliverables"
@@ -33,6 +34,7 @@ const DashboardPage = () => {
           },
         })}
       </Sidebar>
+      <ChatMSG />
     </>
   )
 }
