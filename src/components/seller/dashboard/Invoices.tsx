@@ -1,7 +1,8 @@
 import React from "react"
 
+import Incomp from "../../atoms/invoice-comp/incomp"
 const Invoices = () => {
-  return <div>Invoices</div>
+  return <Incomp />
 }
 
 export default Invoices
