@@ -20,3 +20,6 @@ export const PUSH_API_KEY = process.env.NEXT_API_KEY || ""
 
 /* Providers */
 export const MUMBAI_RPC_PROVIDER = process.env.NEXT_PUBLIC_MUMBAI_RPC_PROVIDER || ""
+
+// Transak
+export const TRANSAK_API_KEY = process.env.NEXT_PUBLIC_TRANSAK_API_KEY || ""
