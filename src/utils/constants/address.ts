@@ -1,2 +1,2 @@
-export const contractAddresss_mumbai = "0x8C07E7C28e0cD2fB45c03076125B7455BC137667"
-export const contractAddress = "0xBB95bfe42cdCF8923C1eBC3EA3885af9416C7Dc4"
+export const AgreementMumbaiAddress = "0x8C07E7C28e0cD2fB45c03076125B7455BC137667"
+export const AgreementMantleAddress = "0xBB95bfe42cdCF8923C1eBC3EA3885af9416C7Dc4"
