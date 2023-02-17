@@ -200,8 +200,8 @@ export default function Incomp() {
                               name=""
                               className="mt-2 block w-full rounded-md border bg-white px-4 py-2 text-indigo-700 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
                               id=""
-                              cols="50"
-                              rows="4"
+                              cols={50}
+                              rows={4}
                               placeholder="Note"
                             ></textarea>
                           </div>
