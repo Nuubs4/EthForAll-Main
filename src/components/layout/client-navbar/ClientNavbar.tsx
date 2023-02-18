@@ -1,5 +1,6 @@
 import React from "react"
 import { Fragment, useState } from "react"
+import Image from "next/image"
 
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
@@ -9,6 +10,8 @@ import {
   MagnifyingGlassIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline"
+
+import Logo from "../../../assets/image/logo.png"
 
 const currencies = ["BTC", "ETH", "USDT", "BNB", "BUSD"]
 const navigation = {

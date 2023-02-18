@@ -1,7 +1,9 @@
 import React from "react"
+import Image from "next/image"
 import { BsFillPersonFill } from "react-icons/bs"
 import { useAccount } from "wagmi"
 
+import Logo from "../../../assets/image/logo.png"
 import Button from "../../atoms/button/Button"
 
 import NavbarProps from "./Navbar.types"
@@ -17,7 +19,9 @@ const Navbar = ({ handleModal }: NavbarProps) => {
 
   return (
     <div className="flex w-full justify-between py-4 px-12">
-      <div>Logo</div>
+      <div>
+        <Image src={Logo} alt={"Decentralance"} className="w-[15rem]" />
+      </div>
       <div className="">
         <ul className="flex gap-8">
           <li className="menu-link">Menu 1</li>
