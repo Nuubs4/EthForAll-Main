@@ -73,6 +73,10 @@ body {
   .base-btn {
     @apply rounded-md bg-gray-100 py-2 px-4 font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
   }
+
+  .categories-page-btn {
+    @apply inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] capitalize hover:text-white focus:outline-none focus:ring active:text-opacity-75;
+  }
 }
 
 @layer utilities {
