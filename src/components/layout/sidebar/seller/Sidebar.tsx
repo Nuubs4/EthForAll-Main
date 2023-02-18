@@ -1,5 +1,7 @@
 import React from "react"
+import Image from "next/image"
 
+import Logo from "../../../../assets/image/logo.png"
 import Toggle from "../../../../assets/svg/sidebar-icons/toggle"
 import Dashboard from "../../../../utils/constants/dashboard"
 import Search from "../../../general/search/Search"
@@ -13,7 +15,7 @@ const Sidebar = ({ children, current, setCurrent }: SidebarProps) => {
     <div className="flex-no-wrap flex h-full md:h-screen">
       <div className="absolute hidden w-64 flex-col justify-between bg-gray-800 shadow sm:relative sm:flex md:h-full">
         <div className="px-8">
-          <div className="flex h-16 w-full items-center">LOGO HERE</div>
+          <Image className="flex w-[15rem] items-center pt-4" src={Logo} alt={"Decentralance"} />
           <ul className="mt-12">
             {Dashboard.SellerDashboardMenu.map((menu, index) => {
               return (
@@ -72,9 +74,11 @@ const Sidebar = ({ children, current, setCurrent }: SidebarProps) => {
           {<Toggle />}
         </div>
         <div className="px-8">
-          <div className={"flex h-16 w-full items-center " + (isOpen ? "" : "hidden")}>
-            LOGO HERE{" "}
-          </div>
+          <Image
+            className={"flex w-full items-center pt-6" + (isOpen ? "" : "hidden")}
+            src={Logo}
+            alt={"Decentralance"}
+          ></Image>
           <ul className={"mt-12 transition-all " + (isOpen ? "" : "hidden")}>
             {Dashboard.SellerDashboardMenu.map((menu, index) => {
               return (

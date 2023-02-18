@@ -2,7 +2,7 @@ import React from "react"
 import { Fragment, useState } from "react"
 import Image from "next/image"
 
-import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
+import { Dialog, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/20/solid"
 import {
   ArchiveBoxArrowDownIcon,
@@ -178,11 +178,7 @@ const ClientNavbar = () => {
                     {/* Logo (lg+) */}
                     <a href="#">
                       <span className="sr-only">Your Company</span>
-                      <img
-                        className="h-8 w-auto"
-                        src="https://via.placeholder.com/50x50/ccc.png"
-                        alt=""
-                      />
+                      <Image src={Logo} alt={"Decentralance"} className="w-[15rem]" />
                     </a>
                   </div>
 
@@ -245,11 +241,7 @@ const ClientNavbar = () => {
                   {/* Logo (lg-) */}
                   <a href="#" className="lg:hidden">
                     <span className="sr-only">Your Company</span>
-                    <img
-                      src="https://via.placeholder.com/50x50/ccc.png"
-                      alt=""
-                      className="h-8 w-auto"
-                    />
+                    <Image src={Logo} alt={"Decentralance"} className="w-[8rem]" />
                   </a>
 
                   <div className="flex flex-1 items-center justify-end">
@@ -288,13 +280,13 @@ const ClientNavbar = () => {
                       </button>
 
                       {/* Cart */}
-                      <div className="ml-4 flow-root lg:ml-0">
+                      <div className="flow-root lg:ml-0">
                         <a href="#" className="group flex items-center p-2">
                           <ArchiveBoxArrowDownIcon
                             className="h-6 w-6 flex-shrink-0 text-white"
                             aria-hidden="true"
                           />
-                          <span className="ml-2 text-sm font-medium text-white">0</span>
+                          <span className="ml-2 text-sm font-medium text-white">6</span>
                           <span className="sr-only">items in cart, view bag</span>
                         </a>
                       </div>
