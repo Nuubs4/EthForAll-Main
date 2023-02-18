@@ -1,10 +1,12 @@
 import React from "react"
 import { Fragment } from "react"
+import Image from "next/image"
 
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { PlusIcon } from "@heroicons/react/20/solid"
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
 
+import Logo from "../../../assets/image/logo.png"
 import {
   sellerSupportNavbarNavigation,
   sellerSupportNavbarPopup,
@@ -34,18 +36,13 @@ const SellerNavbar = ({ handleModal }: SellerNavbarProps) => {
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-10 w-auto rounded-full lg:hidden"
-                    src="https://via.placeholder.com/50x50/ccc.png"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-10 w-auto rounded-full lg:block"
-                    src="https://via.placeholder.com/50x50/ccc.png"
-                    alt="Your Company"
+                  <Image
+                    className="block w-[8rem] rounded-full sm:hidden"
+                    src={Logo}
+                    alt={"Decentralance"}
                   />
                 </div>
-                <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                <div className="hidden md:flex md:items-center md:space-x-4">
                   {sellerSupportNavbarNavigation.map((item) => (
                     <a
                       key={item.name}
