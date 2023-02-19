@@ -26,14 +26,14 @@ const SellerDashboardCategory: SellerDashboardCategoryType = {
   "Previous Gigs": [
     {
       id: 1,
-      title: "Portfolio Website Development",
+      title: "SEO Optimization",
       date: "Dec 12",
       status: "Completed",
       price: 2,
     },
     {
       id: 2,
-      title: "Blockchain Website Development",
+      title: "App Testing",
       date: "Dec 15",
       status: "Completed",
       price: 2,
@@ -42,7 +42,7 @@ const SellerDashboardCategory: SellerDashboardCategoryType = {
   "Active Gigs": [
     {
       id: 1,
-      title: "Backend API Development",
+      title: "App Development",
       date: "Jan 7",
       status: "In Progress",
       price: 16,

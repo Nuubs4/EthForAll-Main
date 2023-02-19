@@ -1,14 +1,18 @@
 import React from "react"
 import { useState } from "react"
+import { useRouter } from "next/router"
 
 import { Tab } from "@headlessui/react"
 
 import ClientFooter from "../layout/client-footer/ClientFooter"
 import ClientNavbar from "../layout/client-navbar/ClientNavbar"
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")
 }
 const ClientOverview = () => {
+  const router = useRouter()
+
   const [categories] = useState({
     Basic: [
       {
@@ -314,6 +318,9 @@ const ClientOverview = () => {
                       <button
                         className="my-1 rounded-md border bg-black p-3 text-white hover:bg-gray-800"
                         type="button"
+                        onClick={() => {
+                          router.push("/client/categories/payment")
+                        }}
                       >
                         Continue
                         <span aria-hidden="true">

@@ -26,3 +26,6 @@ export const TRANSAK_API_KEY = process.env.NEXT_PUBLIC_TRANSAK_API_KEY || ""
 
 /* Mongo */
 export const MONGO_URI = process.env.NEXT_PUBLIC_MONGODB_URI || ""
+
+// Mantle
+export const MANTLE_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_MANTLE_CONTRACT_ADDRESS || ""

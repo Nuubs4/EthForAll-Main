@@ -12,6 +12,7 @@ import {
 } from "@heroicons/react/24/outline"
 
 import Logo from "../../../assets/image/logo.png"
+import { TransakWeb3Context } from "../../../provider/Transak"
 
 const currencies = ["BTC", "ETH", "USDT", "BNB", "BUSD"]
 const navigation = {
@@ -88,7 +89,9 @@ const navigation = {
 
 const ClientNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
+  const TransakWeb3context = React.useContext(TransakWeb3Context)
+  const { openTransak } = TransakWeb3context
+  const [open, setOpen] = useState(false)
   return (
     <div>
       {/* Mobile menu */}
@@ -137,7 +140,9 @@ const ClientNavbar = () => {
                     </div>
                   ))}
                 </div>
-
+                {/* <div>
+                  <button onClick={() => openTransak()}>Fiat On-Ramp</button>
+                </div> */}
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
                   {/* Currency selector */}
                   <form>
@@ -247,7 +252,7 @@ const ClientNavbar = () => {
                   <div className="flex flex-1 items-center justify-end">
                     <div className="flex items-center gap-2 lg:ml-8 lg:gap-4">
                       {/* Currency selector */}
-                      <form className="hidden lg:block">
+                      {/* <form className="hidden lg:block">
                         <div>
                           <label htmlFor="desktop-currency" className="sr-only">
                             Currency
@@ -270,7 +275,14 @@ const ClientNavbar = () => {
                             </div>
                           </div>
                         </div>
-                      </form>
+                      </form> */}
+                      <button
+                        type="button"
+                        className="mr-2 mt-2 mb-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        onClick={() => openTransak()}
+                      >
+                        Get Crypto Now
+                      </button>
                       {/* Post Gig */}
                       <button
                         type="button"

@@ -1,10 +1,19 @@
 import React from "react"
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Image from "next/image"
 
-import { Disclosure, Menu, Transition } from "@headlessui/react"
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react"
 import { PlusIcon } from "@heroicons/react/20/solid"
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline"
+import {
+  Bars3Icon,
+  BellIcon,
+  CreditCardIcon,
+  KeyIcon,
+  SquaresPlusIcon,
+  UserCircleIcon,
+  UserGroupIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline"
 
 import Logo from "../../../assets/image/logo.png"
 import {
@@ -16,7 +25,25 @@ import classNames from "../../../utils/functions/className"
 
 import SellerNavbarProps from "./SellerNavbar.types"
 
+const navigation = [
+  { name: "Account", href: "#", icon: UserCircleIcon, current: true },
+  { name: "Password", href: "#", icon: KeyIcon, current: false },
+  { name: "Plan & Billing", href: "#", icon: CreditCardIcon, current: false },
+  { name: "Team", href: "#", icon: UserGroupIcon, current: false },
+  { name: "Integrations", href: "#", icon: SquaresPlusIcon, current: false },
+]
+
 const SellerNavbar = ({ handleModal }: SellerNavbarProps) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  function closeAddGigForm() {
+    setIsOpen(false)
+  }
+
+  function openAddGigForm() {
+    setIsOpen(true)
+  }
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -63,12 +90,211 @@ const SellerNavbar = ({ handleModal }: SellerNavbarProps) => {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <button
+                    onClick={openAddGigForm}
                     type="button"
                     className="relative inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                     <span>New Job</span>
                   </button>
+
+                  <Transition appear show={isOpen} as={Fragment}>
+                    <Dialog as="div" className="relative z-10" onClose={closeAddGigForm}>
+                      <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                      >
+                        <div className="fixed inset-0 bg-black bg-opacity-25" />
+                      </Transition.Child>
+
+                      <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                          <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0 scale-95"
+                            enterTo="opacity-100 scale-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100 scale-100"
+                            leaveTo="opacity-0 scale-95"
+                          >
+                            <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle text-black shadow-xl transition-all">
+                              <div className="lg:grid">
+                                <div className="space-y-6 sm:px-6 lg:col-span-9 lg:px-0">
+                                  {/* Form */}
+                                  <div>
+                                    <div className="shadow sm:overflow-hidden sm:rounded-md">
+                                      <div className="space-y-6 bg-white py-6 px-4 sm:p-6">
+                                        <div>
+                                          <h3 className="text-lg font-medium leading-6 text-gray-900">
+                                            Add a new Gig
+                                          </h3>
+                                          <p className="mt-1 text-sm text-gray-500">
+                                            Add new gigs that would be visible to your potential
+                                            buyers.
+                                          </p>
+                                        </div>
+
+                                        <div className="grid grid-cols-6 gap-6">
+                                          <div className="col-span-6 sm:col-span-3">
+                                            <label
+                                              htmlFor="gig-name"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Gig Name
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="gig-name"
+                                              placeholder=""
+                                              id="gig-name"
+                                              autoComplete="given-name"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+
+                                          <div className="col-span-6 sm:col-span-3">
+                                            <label
+                                              htmlFor="Gig Title"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Gig Title
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="Gig Title"
+                                              placeholder=""
+                                              id="Gig Title"
+                                              autoComplete="family-name"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+
+                                          <div className="col-span-6 sm:col-span-4">
+                                            <label
+                                              htmlFor="service-type"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Service type
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="service-type"
+                                              placeholder=""
+                                              id="service-type"
+                                              autoComplete="email"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+
+                                          <div className="col-span-6 sm:col-span-3">
+                                            <label
+                                              htmlFor="categories"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Categories
+                                            </label>
+                                            <select
+                                              id="categories"
+                                              name="country"
+                                              autoComplete="country-name"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            >
+                                              <option>Software Development</option>
+                                              <option>IT consultant</option>
+                                              <option>Arts and Designer</option>
+                                            </select>
+                                          </div>
+
+                                          <div className="col-span-6">
+                                            <label
+                                              htmlFor="street-address"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Gig description
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="street-address"
+                                              id="street-address"
+                                              autoComplete="street-address"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+
+                                          <div className="col-span-6 sm:col-span-6 lg:col-span-2">
+                                            <label
+                                              htmlFor="Buy-Price"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Buy Price
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="city"
+                                              id="city"
+                                              autoComplete="address-level2"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+
+                                          <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                                            <label
+                                              htmlFor="hire-price"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Hire Price
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="hire-price"
+                                              id="hire-price"
+                                              autoComplete="address-level1"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+
+                                          <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                                            <label
+                                              htmlFor="delivery-date"
+                                              className="block text-sm font-medium text-gray-700"
+                                            >
+                                              Delivery Date
+                                            </label>
+                                            <input
+                                              type="text"
+                                              name="postal-code"
+                                              id="postal-code"
+                                              autoComplete="postal-code"
+                                              className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                        <button
+                                          onClick={closeAddGigForm}
+                                          // type="submit"
+                                          className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                        >
+                                          Save
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </Dialog.Panel>
+                          </Transition.Child>
+                        </div>
+                      </div>
+                    </Dialog>
+                  </Transition>
                 </div>
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
                   <button

@@ -21,9 +21,10 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
           {/* Gig heading */}
           <div className="mx-4 flex items-center justify-between border-b border-gray-400">
             <div className="py-6">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Gig Name</h3>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">SEO OPTIMIZATION</h3>
               <p className="mt-1 text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quam corrupti consectetur.
+                I will do complete monthly off page SEO backlink package for high quality link
+                building
               </p>
             </div>
             <div className="ml-4 mt-4">
@@ -42,7 +43,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Gig Title</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Herman Bednar</span>
+                  <span className="flex-grow">Seo Optimization</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
@@ -56,14 +57,14 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Email address</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Bernice.Rice78@example.org</span>
+                  <span className="flex-grow">bernice.rice78@example.org</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Service Type</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Infrastructure</span>
+                  <span className="flex-grow">IT and consulting</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
@@ -81,7 +82,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
                           aria-hidden="true"
                         />
                         <span className="ml-2 w-0 flex-1 truncate">
-                          resume_back_end_developer.pdf
+                          seo_wizard_certification.pdf
                         </span>
                       </div>
                       <div className="ml-4 flex flex-shrink-0 space-x-4"></div>
@@ -92,9 +93,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
                           className="h-5 w-5 flex-shrink-0 text-gray-400"
                           aria-hidden="true"
                         />
-                        <span className="ml-2 w-0 flex-1 truncate">
-                          coverletter_back_end_developer.pdf
-                        </span>
+                        <span className="ml-2 w-0 flex-1 truncate">coverletter_SEO.pdf</span>
                       </div>
                       <div className="ml-4 flex flex-shrink-0 space-x-4"></div>
                     </li>
@@ -124,9 +123,9 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
           {/* Gig heading */}
           <div className="mx-4 flex flex-wrap items-center justify-between border-b border-gray-400 sm:flex-nowrap">
             <div className="py-6">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Gig Name</h3>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">App Testing</h3>
               <p className="mt-1 text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quam corrupti consectetur.
+                I will test you application's UI and and backed services.
               </p>
             </div>
             <div className="ml-4 mt-4">
@@ -145,28 +144,28 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Gig Title</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Omar Lang</span>
+                  <span className="flex-grow">App Testing</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Category</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Associate</span>
+                  <span className="flex-grow"> Software Development</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Email address</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Ashlynn.Kiehn6@example.com</span>
+                  <span className="flex-grow">bernice.rice78@example.org</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Service Type</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Implementation</span>
+                  <span className="flex-grow">Development</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
@@ -183,9 +182,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
                           className="h-5 w-5 flex-shrink-0 text-gray-400"
                           aria-hidden="true"
                         />
-                        <span className="ml-2 w-0 flex-1 truncate">
-                          resume_back_end_developer.pdf
-                        </span>
+                        <span className="ml-2 w-0 flex-1 truncate">app_developer.pdf</span>
                       </div>
                       <div className="ml-4 flex flex-shrink-0 space-x-4"></div>
                     </li>
@@ -195,9 +192,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
                           className="h-5 w-5 flex-shrink-0 text-gray-400"
                           aria-hidden="true"
                         />
-                        <span className="ml-2 w-0 flex-1 truncate">
-                          coverletter_back_end_developer.pdf
-                        </span>
+                        <span className="ml-2 w-0 flex-1 truncate">coverletter_developer.pdf</span>
                       </div>
                       <div className="ml-4 flex flex-shrink-0 space-x-4"></div>
                     </li>
@@ -227,9 +222,9 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
           {/* Gig heading */}
           <div className="mx-4 flex flex-wrap items-center justify-between border-b border-gray-400 sm:flex-nowrap">
             <div className="py-6">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Gig Name</h3>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">App Development</h3>
               <p className="mt-1 text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit quam corrupti consectetur.
+                Complete andriod app development for a new startup or an existing business.
               </p>
             </div>
             <div className="ml-4 mt-4">
@@ -248,28 +243,28 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Gig Title</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Steve Crist</span>
+                  <span className="flex-grow">App Development</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Category</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Technician</span>
+                  <span className="flex-grow">Software Development</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Email address</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Sandrine84@example.com</span>
+                  <span className="flex-grow">bernice.rice78@example.org</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
               <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
                 <dt className="text-sm font-medium text-gray-500">Service Type</dt>
                 <dd className="mt-1 flex text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                  <span className="flex-grow">Quality</span>
+                  <span className="flex-grow">Software Development</span>
                   <span className="ml-4 flex-shrink-0"></span>
                 </dd>
               </div>
@@ -286,9 +281,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
                           className="h-5 w-5 flex-shrink-0 text-gray-400"
                           aria-hidden="true"
                         />
-                        <span className="ml-2 w-0 flex-1 truncate">
-                          resume_back_end_developer.pdf
-                        </span>
+                        <span className="ml-2 w-0 flex-1 truncate">app_developer.pdf</span>
                       </div>
                       <div className="ml-4 flex flex-shrink-0 space-x-4"></div>
                     </li>
@@ -298,9 +291,7 @@ const ManageGigs = ({ onClick }: DashboardProps) => {
                           className="h-5 w-5 flex-shrink-0 text-gray-400"
                           aria-hidden="true"
                         />
-                        <span className="ml-2 w-0 flex-1 truncate">
-                          coverletter_back_end_developer.pdf
-                        </span>
+                        <span className="ml-2 w-0 flex-1 truncate">coverletter_developer.pdf</span>
                       </div>
                       <div className="ml-4 flex flex-shrink-0 space-x-4"></div>
                     </li>
