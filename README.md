@@ -2,9 +2,9 @@
 
 Decentralance lets you hire talent from around the world, and pay them in crypto. We are a community of freelancers, developers, designers, and more. We are Decentralance.
 
-(Presentation)[https://www.canva.com/design/DAFbA40WFkw/F64yrpxgw0E6lIBAeE-C6w/view]
-(Demo video)[https://youtu.be/CqrCyR_cFB0]
-(Learn more)[https://drive.google.com/drive/folders/1EAHSUzuf60Sdv4vyNTexNvVP19sIIO69?usp=sharing]
+[Presentation](https://www.canva.com/design/DAFbA40WFkw/F64yrpxgw0E6lIBAeE-C6w/view)
+[Demo video](https://youtu.be/CqrCyR_cFB0)
+[Learn more](https://drive.google.com/drive/folders/1EAHSUzuf60Sdv4vyNTexNvVP19sIIO69?usp=sharing)
 
 ## Introduction
 
