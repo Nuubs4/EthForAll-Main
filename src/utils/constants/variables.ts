@@ -23,3 +23,6 @@ export const MUMBAI_RPC_PROVIDER = process.env.NEXT_PUBLIC_MUMBAI_RPC_PROVIDER |
 
 // Transak
 export const TRANSAK_API_KEY = process.env.NEXT_PUBLIC_TRANSAK_API_KEY || ""
+
+/* Mongo */
+export const MONGO_URI = process.env.NEXT_PUBLIC_MONGODB_URI || ""

@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { BsFillPersonFill } from "react-icons/bs"
 import { useAccount } from "wagmi"
 
@@ -22,13 +23,23 @@ const Navbar = ({ handleModal }: NavbarProps) => {
       <div>
         <Image src={Logo} alt={"Decentralance"} className="w-[15rem]" />
       </div>
-      <div className="">
+      <div className={account ? "" : "hidden"}>
         <ul className="flex gap-8">
-          <li className="menu-link">Menu 1</li>
-          <li className="menu-link">Menu 2</li>
-          <li className="menu-link">Menu 3</li>
-          <li className="menu-link">Menu 4</li>
-          <li className="menu-link">Menu 5</li>
+          <li className="menu-link">
+            <Link href={"/client/categories"}>Browse Categories</Link>
+          </li>
+          <li className="menu-link">
+            <Link href={"/seller/dashboard"}>Seller Dashboard</Link>
+          </li>
+          <li className="menu-link">
+            <Link href={"#"}></Link>
+          </li>
+          <li className="menu-link">
+            <Link href={"#"}></Link>
+          </li>
+          <li className="menu-link">
+            <Link href={"#"}></Link>
+          </li>
         </ul>
       </div>
       <Button

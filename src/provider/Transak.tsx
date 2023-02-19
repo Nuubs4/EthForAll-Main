@@ -20,8 +20,8 @@ const TransakWeb3ContextWeb3ContextProvider = ({ value, ...props }: any) => {
 
   async function openTransak() {
     const transak = new transakSDK({
-      apiKey: TRANSAK_API_KEY, // Your API Key
-      environment: "STAGING", // STAGING/PRODUCTION
+      apiKey: TRANSAK_API_KEY,
+      environment: "STAGING",
       hostURL: window.location.origin,
       widgetHeight: "500px",
       widgetWidth: "500px",
@@ -30,13 +30,15 @@ const TransakWeb3ContextWeb3ContextProvider = ({ value, ...props }: any) => {
       themeColor: "#2e2bed",
       redirectURL: "",
     })
+
     setTransak(transak)
     transak.init()
 
     transak.on(transak.ALL_EVENTS, (data: any) => {
       console.log(data)
     })
-    transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData: any) => {
+
+    transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, () => {
       transak.close()
     })
   }

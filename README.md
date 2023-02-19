@@ -2,6 +2,9 @@
 
 Decentralance lets you hire talent from around the world, and pay them in crypto. We are a community of freelancers, developers, designers, and more. We are Decentralance.
 
+(Presentation)[https://www.canva.com/design/DAFbA40WFkw/F64yrpxgw0E6lIBAeE-C6w/view]
+(Demo video)[]
+
 ## Introduction
 
 Decentralance is the ultimate freelancing decentralized application (DAPP) that connects employers with top talent from around the world. With a community of skilled professionals including developers, designers, writers, and more, Decentralance offers a vast pool of talent for all your project needs.
@@ -43,7 +46,10 @@ At Decentralance, we believe that all you need is an idea, and we will take care
 - Video storage: Decentralance uses Livepeer to store gig videos and freelancer intro videos. By using Livepeer for video storage, Decentralance provides a more decentralized and cost-effective way to store and share these videos. This is a significant advantage over traditional centralized video hosting services, which can be expensive and may not be as reliable as a decentralized network like Livepeer.
 
 - Bidding: Decentralance uses Livepeer to enable clients to stream their project idea and allow freelancers to bid on it in real-time through video. This feature provides a more engaging and interactive way for clients and freelancers to interact and helps to create a more dynamic and competitive environment for bidding.
+
   > Ref : https://docs.livepeer.org/guides/developing/create-a-livestream
+
+- Live consultancy: Livepeer is integrated along with superfluid to generate per second payment stream where client and consultant can discuss and token are streamed on per second basis from client to the consultant
 
 ## Mantle
 
