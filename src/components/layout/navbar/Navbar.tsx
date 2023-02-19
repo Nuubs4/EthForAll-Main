@@ -22,7 +22,7 @@ const Navbar = ({ handleModal }: NavbarProps) => {
       <div>
         <Image src={Logo} alt={"Decentralance"} className="w-[15rem]" />
       </div>
-      <div className="">
+      {/* <div className="">
         <ul className="flex gap-8">
           <li className="menu-link">Menu 1</li>
           <li className="menu-link">Menu 2</li>
@@ -30,7 +30,7 @@ const Navbar = ({ handleModal }: NavbarProps) => {
           <li className="menu-link">Menu 4</li>
           <li className="menu-link">Menu 5</li>
         </ul>
-      </div>
+      </div> */}
       <Button
         onClick={address ? undefined : handleModal ? () => handleModal() : undefined}
         className=""
