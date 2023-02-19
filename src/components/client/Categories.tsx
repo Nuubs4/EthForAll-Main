@@ -30,35 +30,37 @@ const filters = [
 const products = [
   {
     id: 1,
-    name: "Accountability",
+    name: "SEO optimisation",
     description: "Forward Branding Assistant",
     href: "#",
     rating: "⭐⭐⭐⭐",
-    buyPrice: "256 BTC",
-    hirePrice: "360 BTC",
-    imageSrc: "https://api.lorem.space/image/fashion?w=277&h=555&hash=ipy4sigo",
+    buyPrice: "38 BTC",
+    hirePrice: "56 BTC",
+    imageSrc: "https://www.srikanthgiddalur.com/images/blog/seo-services.jpg",
     imageAlt: "International Marketing Associate",
   },
   {
     id: 2,
-    name: "Metrics",
+    name: "API Testing",
     description: "Chief Tactics Analyst",
     href: "#",
     rating: "⭐⭐⭐",
-    buyPrice: "256 BTC",
-    hirePrice: "360 BTC",
-    imageSrc: "https://api.lorem.space/image/fashion?w=277&h=555&hash=ifrggs7j",
+    buyPrice: "42 BTC",
+    hirePrice: "30 BTC",
+    imageSrc:
+      "https://www.vskills.in/certification/blog/wp-content/uploads/2020/01/API-Testing-Featured-Image.png",
     imageAlt: "Global Security Architect",
   },
   {
     id: 3,
-    name: "Identity",
+    name: "App Development",
     description: "Customer Operations Technician",
     href: "#",
     rating: "⭐⭐⭐⭐⭐",
-    buyPrice: "256 BTC",
-    hirePrice: "360 BTC",
-    imageSrc: "https://api.lorem.space/image/fashion?w=277&h=555&hash=44acrzws",
+    buyPrice: "29 BTC",
+    hirePrice: "38 BTC",
+    imageSrc:
+      "https://assets-global.website-files.com/5ec7dad2e6f6295a9e2a23dd/6220b67ed815d28806335429_how-to-develop-app.jpg",
     imageAlt: "Customer Accounts Planner",
   },
 ]
@@ -244,14 +246,14 @@ const Categories = () => {
                   >
                     <div className="overflow-hidden rounded-lg border-4 bg-white shadow-xl">
                       <div
-                        className="h-60 bg-cover bg-center object-scale-down object-top p-4"
+                        className="h-60 bg-cover bg-left p-4"
                         style={{
                           backgroundImage: `url(${product.imageSrc})`,
                         }}
                       ></div>
                       <div className="p-4 py-5">
                         {/* job name */}
-                        <p className="text-2xl font-bold uppercase tracking-wide text-gray-700">
+                        <p className="text-2xl font-bold uppercase tracking-tight text-gray-700">
                           {product.name}
                         </p>
                         {/* Job description */}
