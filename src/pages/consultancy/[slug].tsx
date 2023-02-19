@@ -82,13 +82,21 @@ const VideoCallPage = () => {
           userData: utils.hexlify(utils.toUtf8Bytes(`${address} ${new Date()}`)),
         })
 
-        const newStream = await newStreamOperation.exec(signer)
-
-        return newStream
+        try {
+          const newStream = await newStreamOperation.exec(signer)
+          return newStream
+        } catch (e) {
+          console.clear()
+        }
       } else {
         console.log("Flow Already Exist")
       }
 
+      const joinResponse = await huddleClient.join(joinID, {
+        address: address as string,
+        ens: address as string,
+        wallet: connector?.name,
+      })
       console.log("----- Joined Room -----")
       // console.log(joinResponse)
     } catch (error: any) {
@@ -117,7 +125,11 @@ const VideoCallPage = () => {
         flowRate: "10",
       })
 
-      await createFlowOperation.exec(signer, 10)
+      try {
+        await createFlowOperation.exec(signer, 10)
+      } catch (e) {
+        console.clear()
+      }
 
       await huddleClient.closeRoomForEverybody()
 
@@ -132,7 +144,7 @@ const VideoCallPage = () => {
       <main className="w-screen ">
         <div className="container mx-auto ">
           <p className="mt-[20px] text-[20px]">
-            {status.joined ? "You are in the room" : "You out of the room"}
+            {status.joined ? "You joined Shashank's room" : ""}
           </p>
 
           <div className="container mx-auto">
